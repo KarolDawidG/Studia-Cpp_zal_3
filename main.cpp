@@ -4,6 +4,15 @@ using namespace std;
 
 int main()
 {
-    cout << "Hello world!" << endl;
-    return 0;
+
+
+for (int i=1; i<=3; i++)
+{
+for(int a=1; a<=6; a++)
+{
+cout << "x";
 }
+cout<<endl;
+}
+}
+
