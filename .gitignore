@@ -5,3 +5,6 @@
 *.cbp
 **/obj
 **/bin
+
+*.layout
+*.exe

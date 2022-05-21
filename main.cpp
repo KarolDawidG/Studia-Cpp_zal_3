@@ -1,3 +1,4 @@
+// zadanie zaliczeniowe 1.3
 #include <iostream>
 
 using namespace std;
@@ -11,14 +12,14 @@ int main()
     cin>>n;
     if (n >=1 && n<=10)
     {
-    for (int i=1; i<=n; i++)
-    {
-        for (int j=1; j<=n; j++)
+        for (int i=1; i<=n; i++)
         {
-            cout<<i*j<<"\t";
+            for (int j=1; j<=n; j++)
+            {
+                cout<<i*j<<"\t";
+            }
+            cout<<endl;
         }
-        cout<<endl;
-    }
     }
     else
     {
