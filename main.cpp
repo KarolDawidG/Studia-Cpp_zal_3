@@ -40,7 +40,7 @@ int main()
     for(int i = 1; i<=n; i++)
     {
        x=a+i*h;
-       cout<<"Funkcja y(x)=3^2+3x-1= "<<3*x*x+3*x-1<<"\t"<<endl;
+       cout<<"Funkcja y(x)=3^2+3x-1 dla x = "<<x<<" wynosi: "<<3*x*x+3*x-1<<"\t"<<endl;
     }
 
     return 0;
