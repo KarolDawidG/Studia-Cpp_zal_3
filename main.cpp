@@ -5,6 +5,8 @@ using namespace std;
 
 int main()
 {
+    /*
+    cout << "ZADANIE NR 1." << endl;
     cout << "Tabliczka mnozenia" << endl;
     cout<<endl;
     int n;
@@ -25,5 +27,8 @@ int main()
     {
         cout << "Liczba n spoza przedzialu. " << endl;
     }
+    */
+    cout << "ZADANIE NR 2." << endl;
+
     return 0;
 }
