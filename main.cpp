@@ -9,6 +9,8 @@ int main()
     int n;
     cout <<"Podaj wartosc n z przedzialu <1, 10>: "<<endl;
     cin>>n;
+    if (n >=1 && n<=10)
+    {
     for (int i=1; i<=n; i++)
     {
         for (int j=1; j<=n; j++)
@@ -16,6 +18,11 @@ int main()
             cout<<i*j<<"\t";
         }
         cout<<endl;
+    }
+    }
+    else
+    {
+        cout << "Liczba n spoza przedzialu. " << endl;
     }
     return 0;
 }
