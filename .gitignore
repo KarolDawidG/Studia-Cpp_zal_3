@@ -1,0 +1,7 @@
+*.slo
+*.lo
+*.o
+*.obj
+*.cbp
+**/obj
+**/bin
