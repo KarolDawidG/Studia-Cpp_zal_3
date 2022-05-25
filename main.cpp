@@ -54,6 +54,8 @@ int main()
     }
     }
 /////////////////////////////////////////////////////////////////////////////////////////////
+
+/////////////////////////////////////////////////////////////////////////////////////////////
     {
         int nn=1;
         int licznik2=0;
@@ -66,14 +68,13 @@ int main()
             cin>>nn;
             licznik2++;
             suma2+=nn;
-            cout<<"Podaj kolejna liczbe calkowita: "<<endl;
+            cout<<"Podaj kolejna liczbe calkowita: (albo cacisnij 0, aby zakonczyc)"<<endl;
         }
         srednia_liczb=suma2/(licznik2-1);
         cout<<"Suma liczb calkowitych wynosi: "<<suma2<<endl;
         cout<<"Srednia liczb calkowitych wynosi: "<<setprecision(2)<<srednia_liczb<<endl<<endl;
-
     }
-
+/////////////////////////////////////////////////////////////////////////////////////////////
 
     return 0;
 }
