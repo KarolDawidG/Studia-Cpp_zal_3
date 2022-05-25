@@ -1,9 +1,10 @@
 *.slo
+*.layout
+*.exe
 *.lo
 *.o
 *.obj
 *.cbp
 **/obj
 **/bin
-*.layout
-*.exe
+
