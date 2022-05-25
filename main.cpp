@@ -10,7 +10,7 @@ int main()
 /////////////////////////////////////////////////////////////////////////////////////////////
 
     {
-
+    cout <<"=================================================="<<endl;
     cout << "ZADANIE NR 1." << endl;
     cout << "Tabliczka mnozenia" << endl;
     cout<<endl;
@@ -32,6 +32,7 @@ int main()
     {
         cout << "Liczba n spoza przedzialu. " << endl<<endl;
     }
+    cout <<"=================================================="<<endl<<endl<<endl;
     }
 /////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -39,6 +40,7 @@ int main()
 /////////////////////////////////////////////////////////////////////////////////////////////
    {
     int h, n, a, x;
+    cout <<"=================================================="<<endl;
     cout << "ZADANIE NR 2." << endl;
     cout <<"a - punkt poczatkowy x. "<<endl;
     cin>>a;
@@ -52,6 +54,7 @@ int main()
        x=a+i*h;
        cout<<"Funkcja y(x)=3^2+3x-1 dla x = "<<x<<" wynosi: "<<3*x*x+3*x-1<<"\t"<<endl<<endl;
     }
+    cout <<"=================================================="<<endl<<endl<<endl;
     }
 /////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -61,6 +64,7 @@ int main()
         int licznik2=0;
         float suma2=0;
         float srednia_liczb;
+        cout <<"=================================================="<<endl;
         cout << "ZADANIE NR 3." << endl;
         cout<<"Podaj liczbe calkowita: "<<endl;
         while(nn!=0)
@@ -68,13 +72,34 @@ int main()
             cin>>nn;
             licznik2++;
             suma2+=nn;
-            cout<<"Podaj kolejna liczbe calkowita: (albo cacisnij 0, aby zakonczyc)"<<endl;
+            cout<<"Podaj kolejna liczbe calkowita: (albo cacisnij 0, aby zakonczyc)"<<endl<<endl;
         }
         srednia_liczb=suma2/(licznik2-1);
+        cout <<"=================================================="<<endl;
         cout<<"Suma liczb calkowitych wynosi: "<<suma2<<endl;
         cout<<"Srednia liczb calkowitych wynosi: "<<setprecision(2)<<srednia_liczb<<endl<<endl;
+        cout <<"=================================================="<<endl<<endl<<endl;
     }
 /////////////////////////////////////////////////////////////////////////////////////////////
 
+
+{
+    double nn, suma1=0;
+    double jj=0;
+    cout <<"=================================================="<<endl;
+    cout<<"Oblicz sume szeregu od j=0, do m, wedlug wzoru: 1+j/2j^3+3"<<endl;
+    cout<<"Podaj wartosc m: "<<endl;
+    cin>>nn;
+    do
+    {
+
+        suma1+=(1+jj)/((2*jj*jj*jj)+3);
+         jj++;
+    }   while (jj<=nn);
+    cout <<"=================================================="<<endl;
+    cout<<"S wynosi: "<<setprecision(6)<<suma1<<endl;
+    cout <<"=================================================="<<endl<<endl<<endl;
+}
+/////////////////////////////////////////////////////////////////////////////////////////////
     return 0;
 }
