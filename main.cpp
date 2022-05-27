@@ -102,21 +102,63 @@ int main()
 */
 {
 string nazwa_hotelu;
-int liczba_pieter, liczba_pokoi, pietro_bezpokoi;
+int liczba_pieter, liczba_pokoi, pietro_bezpokoi, liczba_zajetych_pokoi;
+int i=0;
+double procent, suma_pokoi, suma_zajetych_pokoi;
 
   cout <<"=================================================="<<endl;
   cout << "ZADANIE NR 5." << endl;
-  cout<<"Podaj nazwe hotelu: "<<endl;
-  cin>>nazwa_hotelu;
+ // cout<<"Podaj nazwe hotelu: "<<endl;
+ // cin>>nazwa_hotelu;
   cout<<"Podaj liczbe pieter: "<<endl;
   cin>>liczba_pieter;
-  cout<<"Podaj liczbe pokoi: "<<endl;
-  cin>>liczba_pokoi;
+  if (liczba_pieter<=1)
+    {
+        cout<<"Liczba pieter nie moze byc mniejsza od 1"<<endl;
+    }
+    else
+    {
   cout<<"Podaj numer pietra na ktorym nie ma pokoi: "<<endl;
   cin>>pietro_bezpokoi;
-  cout<<"Hotel o nazwie "<<nazwa_hotelu<<" ma "<<liczba_pieter<<" pieter, po "<<liczba_pokoi<<" pokoje."<<endl;
-  cout<<"Pietro nr "<<pietro_bezpokoi<<" jest bez pokoi."<<endl;
-}
+//  cout<<"Hotel o nazwie "<<nazwa_hotelu<<" ma "<<liczba_pieter<<" pieter."<<endl;
+ // cout<<"Pietro nr "<<pietro_bezpokoi<<" jest bez pokoi."<<endl;
+
+
+
+  while(i<liczba_pieter)
+        {
+            cout<<"Ile pokoi jest na pietrze "<<i+1<<"?"<<endl;
+            cin>>liczba_pokoi;
+            if (liczba_pokoi<10)
+            {
+                cout <<"Liczba pokoi musi byc wieksza od 10."<<endl;
+            }
+            else
+            {
+            cout<<"Podaj liczbe zajetych pokoj."<<endl;
+            cin>>liczba_zajetych_pokoi;
+            if (liczba_pokoi>=liczba_zajetych_pokoi)
+            {
+                i++;
+                   if (i==pietro_bezpokoi)
+                        {
+                        cout<<"To pietro jest bez bez pokoi. Podane wartosci nie zostana wliczone."<<endl;
+                        continue;
+                        }
+                suma_pokoi+=liczba_pokoi;
+                suma_zajetych_pokoi+=liczba_zajetych_pokoi;
+            }
+            else
+            {
+                cout<<"ERROR! Liczba zajetych pokoi nie moze byc wyzsza niz liczba pokoi!!!"<<endl;
+            }
+        }}
+             cout<<"Suma pokoi: "<<suma_pokoi<<endl;
+             cout<<"Suma zajetych pokoi: "<<suma_zajetych_pokoi<<endl;
+
+             procent=(suma_zajetych_pokoi/suma_pokoi)*100;
+             cout<<"Pokoje zajete stanowia: "<<procent<<"% wszystkich pokoi w hotelu."<<endl;
+    }}
 /////////////////////////////////////////////////////////////////////////////////////////////
     return 0;
 }
