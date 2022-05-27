@@ -101,31 +101,32 @@ int main()
 /////////////////////////////////////////////////////////////////////////////////////////////
 */
 {
+int wybor;
+do
+{
 string nazwa_hotelu;
-int liczba_pieter, liczba_pokoi, pietro_bezpokoi, liczba_zajetych_pokoi;
+int liczba_pieter=0, liczba_pokoi=0, pietro_bezpokoi=0, liczba_zajetych_pokoi=0;
 int i=0;
-double procent, suma_pokoi, suma_zajetych_pokoi;
+double procent=0, suma_pokoi=0, suma_zajetych_pokoi=0;
 
-  cout <<"=================================================="<<endl;
-  cout << "ZADANIE NR 5." << endl;
- // cout<<"Podaj nazwe hotelu: "<<endl;
- // cin>>nazwa_hotelu;
-  cout<<"Podaj liczbe pieter: "<<endl;
-  cin>>liczba_pieter;
-  if (liczba_pieter<=1)
-    {
+    cout <<"=================================================="<<endl;
+    cout << "ZADANIE NR 5." << endl;
+    cout<<"Podaj nazwe hotelu: "<<endl;
+    cin>>nazwa_hotelu;
+
+    cout<<"Podaj liczbe pieter: "<<endl;
+    cin>>liczba_pieter;
+        if (liczba_pieter<1)
+        {
         cout<<"Liczba pieter nie moze byc mniejsza od 1"<<endl;
-    }
-    else
-    {
-  cout<<"Podaj numer pietra na ktorym nie ma pokoi: "<<endl;
-  cin>>pietro_bezpokoi;
-//  cout<<"Hotel o nazwie "<<nazwa_hotelu<<" ma "<<liczba_pieter<<" pieter."<<endl;
- // cout<<"Pietro nr "<<pietro_bezpokoi<<" jest bez pokoi."<<endl;
-
-
-
-  while(i<liczba_pieter)
+        }
+        else
+        {
+        cout<<"Podaj numer pietra na ktorym nie ma pokoi: "<<endl;
+        cin>>pietro_bezpokoi;
+        cout<<"Hotel o nazwie "<<nazwa_hotelu<<" ma "<<liczba_pieter<<" pieter."<<endl;
+        cout<<"Pietro nr "<<pietro_bezpokoi<<" jest bez pokoi."<<endl;
+        while(i<liczba_pieter)
         {
             cout<<"Ile pokoi jest na pietrze "<<i+1<<"?"<<endl;
             cin>>liczba_pokoi;
@@ -138,27 +139,34 @@ double procent, suma_pokoi, suma_zajetych_pokoi;
             cout<<"Podaj liczbe zajetych pokoj."<<endl;
             cin>>liczba_zajetych_pokoi;
             if (liczba_pokoi>=liczba_zajetych_pokoi)
-            {
+                {
                 i++;
-                   if (i==pietro_bezpokoi)
-                        {
-                        cout<<"To pietro jest bez bez pokoi. Podane wartosci nie zostana wliczone."<<endl;
-                        continue;
-                        }
+            if (i==pietro_bezpokoi)
+                {
+            cout<<"To pietro jest bez bez pokoi. Podane wartosci nie zostana wliczone."<<endl<<endl;
+            continue;
+                }
                 suma_pokoi+=liczba_pokoi;
                 suma_zajetych_pokoi+=liczba_zajetych_pokoi;
-            }
+                }
             else
-            {
+                {
                 cout<<"ERROR! Liczba zajetych pokoi nie moze byc wyzsza niz liczba pokoi!!!"<<endl;
+                }
             }
-        }}
+        }
              cout<<"Suma pokoi: "<<suma_pokoi<<endl;
              cout<<"Suma zajetych pokoi: "<<suma_zajetych_pokoi<<endl;
-
              procent=(suma_zajetych_pokoi/suma_pokoi)*100;
              cout<<"Pokoje zajete stanowia: "<<procent<<"% wszystkich pokoi w hotelu."<<endl;
-    }}
+    }
+    getchar();
+    cout<<"Reset? Nacisnij 1"<<endl;
+    cin>>wybor;
+   }while (wybor==1);
+}
+
+
 /////////////////////////////////////////////////////////////////////////////////////////////
     return 0;
 }
