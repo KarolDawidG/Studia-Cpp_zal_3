@@ -8,7 +8,7 @@ using namespace std;
 int main()
 {
 /////////////////////////////////////////////////////////////////////////////////////////////
-
+/*
     {
     cout <<"=================================================="<<endl;
     cout << "ZADANIE NR 1." << endl;
@@ -82,7 +82,6 @@ int main()
     }
 /////////////////////////////////////////////////////////////////////////////////////////////
 
-
 {
     double nn, suma1=0;
     double jj=0;
@@ -92,13 +91,31 @@ int main()
     cin>>nn;
     do
     {
-
         suma1+=(1+jj)/((2*jj*jj*jj)+3);
          jj++;
     }   while (jj<=nn);
     cout <<"=================================================="<<endl;
     cout<<"S wynosi: "<<setprecision(6)<<suma1<<endl;
     cout <<"=================================================="<<endl<<endl<<endl;
+}
+/////////////////////////////////////////////////////////////////////////////////////////////
+*/
+{
+string nazwa_hotelu;
+int liczba_pieter, liczba_pokoi, pietro_bezpokoi;
+
+  cout <<"=================================================="<<endl;
+  cout << "ZADANIE NR 5." << endl;
+  cout<<"Podaj nazwe hotelu: "<<endl;
+  cin>>nazwa_hotelu;
+  cout<<"Podaj liczbe pieter: "<<endl;
+  cin>>liczba_pieter;
+  cout<<"Podaj liczbe pokoi: "<<endl;
+  cin>>liczba_pokoi;
+  cout<<"Podaj numer pietra na ktorym nie ma pokoi: "<<endl;
+  cin>>pietro_bezpokoi;
+  cout<<"Hotel o nazwie "<<nazwa_hotelu<<" ma "<<liczba_pieter<<" pieter, po "<<liczba_pokoi<<" pokoje."<<endl;
+  cout<<"Pietro nr "<<pietro_bezpokoi<<" jest bez pokoi."<<endl;
 }
 /////////////////////////////////////////////////////////////////////////////////////////////
     return 0;
