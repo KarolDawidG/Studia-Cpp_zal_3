@@ -1,4 +1,4 @@
-// zadanie zaliczeniowe 1.3
+// Zadanie nr 1.3, Dawid Karol Glinkowski, nr indeksu 154837
 #include <iostream>
 #include <math.h>
 #include <iomanip>
@@ -8,9 +8,9 @@ using namespace std;
 int main()
 {
 /////////////////////////////////////////////////////////////////////////////////////////////
-
-    {
+    {               // Wyswietlanie tabliczki mnozenia
     cout <<"=================================================="<<endl;
+    cout <<"Zadanie zaliczeniowe nr 1.3, Dawid Karol Glinkowski, nr indeksu 154837"<<endl;
     cout << "ZADANIE NR 1." << endl;
     cout << "Tabliczka mnozenia" << endl;
     cout<<endl;
@@ -38,34 +38,36 @@ int main()
 
 
 /////////////////////////////////////////////////////////////////////////////////////////////
-   {
+   {                // Zadanie nr 2 - liczenie wartosci funkcji
     int h, n, a, x;
     cout <<"=================================================="<<endl;
     cout << "ZADANIE NR 2." << endl;
-    cout <<"a - punkt poczatkowy x. "<<endl;
+    cout << "Program do liczenia funkcji y(x)= 3*x2+3*x-1 dla x wedlug wzoru: x=a+i*h" << endl;
+    cout <<"Podaj punkt poczatkowy 'a': "<<endl;
     cin>>a;
-    cout <<"Podaw wartosc h - krok. "<<endl;
+    cout <<"Podaj wartosc kroku 'h': "<<endl;
     cin >> h;
-    cout <<"Podaw wartosc n - liczba krokow. "<<endl;
+    cout <<"Podaw wartosc 'n' - liczba krokow: "<<endl;
     cin>>n;
     x=a;
-    for(int i = 1; i<=n; i++)
+    for(int i = 0; i<n; i++)
     {
        x=a+i*h;
-       cout<<"Funkcja y(x)=3^2+3x-1 dla x = "<<x<<" wynosi: "<<3*x*x+3*x-1<<"\t"<<endl<<endl;
+       cout<<"Funkcja y(x)=3*x^2+3x-1 dla x = "<<x<<", wedlug wzoru: x=a+i*h wynosi: "<<3*x*x+3*x-1<<"\t"<<endl<<endl;
     }
     cout <<"=================================================="<<endl<<endl<<endl;
     }
 /////////////////////////////////////////////////////////////////////////////////////////////
 
 /////////////////////////////////////////////////////////////////////////////////////////////
-    {
+    {               // zadanie nr 3 Liczenie sredniej liczb calkowitych
         int nn=1;
         int licznik2=0;
         float suma2=0;
         float srednia_liczb;
         cout <<"=================================================="<<endl;
         cout << "ZADANIE NR 3." << endl;
+        cout << "Program do liczenia sredniej kilku liczb calkowitych." << endl;
         cout<<"Podaj liczbe calkowita: "<<endl;
         while(nn!=0)
         {
@@ -81,10 +83,12 @@ int main()
         cout <<"=================================================="<<endl<<endl<<endl;
     }
 /////////////////////////////////////////////////////////////////////////////////////////////
-
+        // Zadanie nr 4 Program do liczenia sumy ciagu.
 {
     double nn, suma1=0;
     double jj=0;
+    cout <<"Zadanie nr 4. "<<endl;
+    cout <<"Program do liczenia sumy ciagu. "<<endl;
     cout <<"=================================================="<<endl;
     cout<<"Oblicz sume szeregu od j=0, do m, wedlug wzoru: 1+j/2j^3+3"<<endl;
     cout<<"Podaj wartosc m: "<<endl;
@@ -99,6 +103,7 @@ int main()
     cout <<"=================================================="<<endl<<endl<<endl;
 }
 /////////////////////////////////////////////////////////////////////////////////////////////
+        // Program do obliczania oblozenia hotelu.
 
 {
 int wybor;
@@ -107,10 +112,13 @@ do
 string nazwa_hotelu;
 int liczba_pieter=0, liczba_pokoi=0, pietro_bezpokoi=0, liczba_zajetych_pokoi=0;
 int i=0;
+long int x, y;  // zmienne pomocnicze do poprawnego przekazania wyniku
 double procent=0, suma_pokoi=0, suma_zajetych_pokoi=0;
     cout <<"=================================================="<<endl;
     cout << "ZADANIE NR 5." << endl;
+    cout << "Program do obliczanie oblozenia hotelu" << endl;
     cout<<"Podaj nazwe hotelu: "<<endl;
+    cout<<"UWAGA ! ! ! Nazwa hotelu musi byc jednoczlonowa! "<<endl;
     cin>>nazwa_hotelu;
     cout<<"Podaj liczbe pieter: "<<endl;
     cin>>liczba_pieter;
@@ -155,12 +163,14 @@ double procent=0, suma_pokoi=0, suma_zajetych_pokoi=0;
         }
         suma_pokoi+=liczba_pokoi;
         suma_zajetych_pokoi+=liczba_zajetych_pokoi;
+        x=suma_pokoi;
+        y=suma_zajetych_pokoi;
         }
         }
         }
         }
-        cout<<"Suma pokoi: "<<suma_pokoi<<endl;
-        cout<<"Suma zajetych pokoi: "<<suma_zajetych_pokoi<<endl;
+        cout<<"Suma pokoi: "<<x<<endl;
+        cout<<"Suma zajetych pokoi: "<<y<<endl;
         procent=(suma_zajetych_pokoi/suma_pokoi)*100;
         cout<<"Pokoje zajete stanowia: "<<setprecision(2)<<procent<<"% wszystkich pokoi w hotelu."<<endl;
         }
